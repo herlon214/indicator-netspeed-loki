@@ -1,0 +1,115 @@
+<schemalist>
+  <schema id="apps.indicators.netspeed-unity" path="/apps/indicators/netspeed-unity/" gettext-domain="netspeed-unity">
+    <key name="if-name" type="s">
+      <default>"All"</default>
+      <summary>Selected Network Interface</summary>
+      <description>
+        The network interface that was selected last.
+      </description>
+    </key>
+    <key name="pictures-of-the-current-theme" type="b">
+      <default>false</default>
+      <summary>pictures of the current theme</summary>
+      <description>pictures from the current theme or from a file</description>
+    </key>
+    <key name="padding-indicator" type="b">
+      <default>false</default>
+      <summary>padding indicator</summary>
+      <description>to preserve the indentation of the text in the indicator</description>
+    </key>
+    <key name="pic-file-network-transmit-receive" type="s">
+      <default>"/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-receive-d.svg"</default>
+      <summary>network-transmit-receive</summary>
+      <description>
+        For dark theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-receive-d.svg".
+For light theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-receive-l.svg".
+      </description>
+    </key>
+    <key name="pic-file-network-receive" type="s">
+      <default>"/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-receive-d.svg"</default>
+      <summary>network-receive</summary>
+      <description>
+        For dark theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-receive-d.svg".
+For light theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-receive-l.svg".
+      </description>
+    </key>
+    <key name="pic-file-network-transmit" type="s">
+      <default>"/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-d.svg"</default>
+      <summary>network-transmit</summary>
+      <description>
+        For dark theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-d.svg".
+For light theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-l.svg".
+      </description>
+    </key>
+    <key name="pic-file-network-idle" type="s">
+      <default>"/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-idle-d.svg"</default>
+      <summary>network-idle</summary>
+      <description>
+        For dark theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-idle-d.svg".
+For light theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-idle-l.svg".
+      </description>
+    </key>
+
+    <key name="pic-theme-network-transmit-receive" type="s">
+      <default>"network-transmit-receive"</default>
+      <summary>network-transmit-receive</summary>
+      <description>
+        The picture of the current theme.
+      </description>
+    </key>
+    <key name="pic-theme-network-receive" type="s">
+      <default>"network-receive"</default>
+      <summary>network-receive</summary>
+      <description>
+        The picture of the current theme.
+      </description>
+    </key>
+    <key name="pic-theme-network-transmit" type="s">
+      <default>"network-transmit"</default>
+      <summary>network-transmit</summary>
+      <description>
+        The picture of the current theme.
+      </description>
+    </key>
+    <key name="pic-theme-network-idle" type="s">
+      <default>"network-idle"</default>
+      <summary>network-idle</summary>
+      <description>
+        The picture of the current theme - "network-idle".
+or:
+For dark theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-idle-d.svg".
+For light theme - "/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-idle-l.svg".
+      </description>
+    </key>
+
+    <key name="ordering-index" type="i">
+      <default>-10</default>
+      <summary>Ordering Index</summary>
+      <description>
+        Specifiy ordering index to position indicator within other app indicators.
+      </description>
+    </key>
+    <key name="state" type="i">
+      <default>0</default>
+      <summary>Appearance settings</summary>
+      <description>
+	Download = 1, upload = 2, total = 0 or 3.
+      </description>
+    </key>
+    <key name="show-bin-dec-bit" type="i">
+      <default>0</default>
+      <summary>Prefixes</summary>
+      <description>
+	Binary (1 kibibyte = 1024 byte) = 0;
+Decimal (1 kilobyte = 1000 byte) = 1;
+Bits (1 kilobit = 1000 bit, 1 kilobyte = 8000 bit) = 2.
+      </description>
+    </key>
+    <key name="show-settings" type="b">
+      <default>true</default>
+      <summary>Show settings</summary>
+      <description>
+      </description>
+    </key>
+  </schema>
+</schemalist>
