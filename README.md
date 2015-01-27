@@ -19,7 +19,7 @@ Deb
 -----
 
 ```
-sudo apt-get install fakeroot
+sudo apt-get install fakeroot dpkg-dev
 delete line (	glib-compile-schemas $(DESTDIR)/usr/share/glib-2.0/schemas/ ) in Makefile
 dpkg-buildpackage -rfakeroot -b
 
