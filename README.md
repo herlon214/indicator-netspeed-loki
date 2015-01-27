@@ -15,6 +15,16 @@ sudo make install
 indicator-netspeed-unity &
 ```
 
+Deb
+-----
+
+```
+sudo apt-get install fakeroot
+delete line (	glib-compile-schemas $(DESTDIR)/usr/share/glib-2.0/schemas/ ) in Makefile
+dpkg-buildpackage -rfakeroot -b
+
+```
+
 The indicator will be put left of all your other indicators. If this is undesirable, the ordering
 index can be changed in gsettings:/apps/indicators/netspeed-unity (use dconf-editor).
 
