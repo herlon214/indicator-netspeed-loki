@@ -8,7 +8,7 @@ Usage
 
 ```
 sudo apt-get install build-essential libgtop2-dev libgtk-3-dev libappindicator3-dev git-core
-git clone git://github.com/GGleb/indicator-netspeed-unity.git
+git clone https://github.com/GGleb/indicator-netspeed-unity.git
 cd indicator-netspeed-unity
 make
 sudo make install
