@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 7),
 	libgtk-3-dev,
 	libappindicator3-dev,
 	libgtop2-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: https://launchpad.net/~fixnix/+archive/ubuntu/netspeed
 
 Package: indicator-netspeed-unity
