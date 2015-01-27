@@ -22,7 +22,7 @@ install:
 	install -Dm 644 resources/indicator-netspeed-transmit-l.svg $(DESTDIR)/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-l.svg
 	install -Dm 644 resources/indicator-netspeed-transmit-receive-d.svg $(DESTDIR)/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-receive-d.svg
 	install -Dm 644 resources/indicator-netspeed-transmit-receive-l.svg $(DESTDIR)/usr/share/pixmaps/indicator-netspeed-unity/indicator-netspeed-transmit-receive-l.svg
-#	glib-compile-schemas /usr/share/glib-2.0/schemas/
+	glib-compile-schemas /usr/share/glib-2.0/schemas/
 	install -Dm 755 install_nethogs.sh $(DESTDIR)/usr/share/indicator-netspeed-unity/install_nethogs.sh
 	bash potomo.sh $(DESTDIR)/usr/share/locale
 
@@ -42,4 +42,4 @@ uninstall:
 	rmdir $(DESTDIR)/usr/share/pixmaps/indicator-netspeed-unity/
 	rm $(DESTDIR)/usr/share/indicator-netspeed-unity/install_nethogs.sh
 	rmdir $(DESTDIR)/usr/share/indicator-netspeed-unity/
-
+	glib-compile-schemas /usr/share/glib-2.0/schemas/
