@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Categories=GNOME;Network;
+Name=Indicator netspeed-unity
+Name[ru]=Индикатор netspeed-unity
+Comment=Network speed indicator for Unity.
+Comment[ru]=В режиме реального времени показывает объем входящего и исходящего трафика на панели Unity.
+Exec=indicator-netspeed-unity
+Icon=network-transmit-receive
