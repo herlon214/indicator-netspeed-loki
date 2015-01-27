@@ -1,0 +1,19 @@
+Source: indicator-netspeed-unity
+Section: gnome
+Priority: extra
+Maintainer: Gleb Golovachev <golovachev.gleb@gmail.com>
+Build-Depends: debhelper (>= 7),
+	libgtk-3-dev,
+	libappindicator3-dev,
+	libgtop2-dev
+Standards-Version: 3.9.4
+Homepage: https://launchpad.net/~fixnix/+archive/ubuntu/netspeed
+
+Package: indicator-netspeed-unity
+Architecture: any
+Depends: ${misc:Depends},
+	${shlibs:Depends}
+Description: Network speed indicator for Unity
+ Indicator Netspeed Unity is an indicator for the Unity panel that shows how much traffic
+ occurs on a network device (ethernet card, wireless LAN card, or
+ dial-up).

@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: indicator-netspeed-unity 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 13:10+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: indicator-netspeed-unity.c:99
+msgid "b"
+msgstr "b"
+
+#: indicator-netspeed-unity.c:100 indicator-netspeed-unity.c:101
+msgid "B"
+msgstr "B"
+
+#: indicator-netspeed-unity.c:106
+msgid "kb"
+msgstr "kb"
+
+#: indicator-netspeed-unity.c:107
+msgid "kB"
+msgstr "kB"
+
+#: indicator-netspeed-unity.c:108
+msgid "KiB"
+msgstr "KiB"
+
+#: indicator-netspeed-unity.c:113
+msgid "Mb"
+msgstr "Mb"
+
+#: indicator-netspeed-unity.c:114
+msgid "MB"
+msgstr "MB"
+
+#: indicator-netspeed-unity.c:115
+msgid "MiB"
+msgstr "MiB"
+
+#: indicator-netspeed-unity.c:120
+msgid "Gb"
+msgstr "Gb"
+
+#: indicator-netspeed-unity.c:121
+msgid "GB"
+msgstr "GB"
+
+#: indicator-netspeed-unity.c:122
+msgid "GiB"
+msgstr "GiB"
+
+#: indicator-netspeed-unity.c:127
+msgid "Tb"
+msgstr "Tb"
+
+#: indicator-netspeed-unity.c:128
+msgid "TB"
+msgstr "TB"
+
+#: indicator-netspeed-unity.c:129
+msgid "TiB"
+msgstr "TiB"
+
+#: indicator-netspeed-unity.c:134
+msgid "Pb"
+msgstr "Pb"
+
+#: indicator-netspeed-unity.c:135
+msgid "PB"
+msgstr "PB"
+
+#: indicator-netspeed-unity.c:136
+msgid "PiB"
+msgstr "PiB"
+
+#: indicator-netspeed-unity.c:510 indicator-netspeed-unity.c:518
+#: indicator-netspeed-unity.c:525 indicator-netspeed-unity.c:556
+msgid "s"
+msgstr "s"
+
+#: indicator-netspeed-unity.c:653
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: indicator-netspeed-unity.c:658
+msgid "Prefixes"
+msgstr "Präfixe"
+
+#: indicator-netspeed-unity.c:664
+msgid "Binary"
+msgstr "binär"
+
+#: indicator-netspeed-unity.c:668
+msgid "Decimal"
+msgstr "Dezimal"
+
+#: indicator-netspeed-unity.c:672
+msgid "Bits"
+msgstr "Bits"
+
+#: indicator-netspeed-unity.c:684
+msgid "Theme"
+msgstr "Thema"
+
+#: indicator-netspeed-unity.c:690
+msgid "Dark"
+msgstr "Dunkel"
+
+#: indicator-netspeed-unity.c:694
+msgid "Light"
+msgstr "Licht"
+
+#: indicator-netspeed-unity.c:698
+msgid "Current"
+msgstr "Aktuell"
+
+#: indicator-netspeed-unity.c:712
+msgid "Padding"
+msgstr "Innenabstand"
+
+#: indicator-netspeed-unity.c:717
+msgid "Tools"
+msgstr "Werkzeuge"
+
+msgid "All"
+msgstr "Alle"

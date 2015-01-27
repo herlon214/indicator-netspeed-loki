@@ -42,3 +42,4 @@ uninstall:
 	rmdir $(DESTDIR)/usr/share/pixmaps/indicator-netspeed-unity/
 	rm $(DESTDIR)/usr/share/indicator-netspeed-unity/install_nethogs.sh
 	rmdir $(DESTDIR)/usr/share/indicator-netspeed-unity/
+
