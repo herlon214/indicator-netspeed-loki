@@ -168,30 +168,15 @@ gchar* format_net_label(const gchar *in_begin, double bytes, int show_as, gboole
 }
 
 const gchar *gsettings_get_value_string (const gchar *key) {
-    GVariant *tmp_variant;
-    const gchar *tmp_str;
-    tmp_variant = g_settings_get_value( settings, key );
-    tmp_str = g_variant_get_string( tmp_variant, NULL );
-    g_variant_unref( tmp_variant );
-    return tmp_str;
+    return g_variant_get_string( g_settings_get_value( settings, key ), NULL );
 }
 
 gboolean gsettings_get_value_boolean (const gchar *key) {
-    GVariant *tmp_variant;
-    gboolean tmp_bool;
-    tmp_variant = g_settings_get_value( settings, key );
-    tmp_bool = g_variant_get_boolean( tmp_variant );
-    g_variant_unref( tmp_variant );
-    return tmp_bool;
+    return g_variant_get_boolean( g_settings_get_value( settings, key ) );
 }
 
 gint32 gsettings_get_value_gint32 (const gchar *key) {
-    GVariant *tmp_variant;
-    gint32 tmp_int;
-    tmp_variant = g_settings_get_value( settings, key );
-    tmp_int = g_variant_get_int32( tmp_variant );
-    g_variant_unref( tmp_variant );
-    return tmp_int;
+    return g_variant_get_int32( g_settings_get_value( settings, key ) );
 }
 
 void if_net_down_item_activate(GtkMenuItem *menu_item, gpointer data) {
