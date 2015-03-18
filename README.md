@@ -25,6 +25,16 @@ dpkg-buildpackage -rfakeroot -b
 
 ```
 
+PPA
+-----
+
+```
+sudo apt-add-repository ppa:fixnix/netspeed
+sudo apt-get update
+sudo apt-get install indicator-netspeed-unity
+
+```
+
 The indicator will be put left of all your other indicators. If this is undesirable, the ordering
 index can be changed in gsettings:/apps/indicators/netspeed-unity (use dconf-editor).
 
