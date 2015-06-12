@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: indicator-netspeed-unity 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-22 13:10+0500\n"
+"POT-Creation-Date: 2015-06-12 18:37+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Gleb Golovachev <golovachev.gleb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,120 +17,137 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: indicator-netspeed-unity.c:99
+#: indicator-netspeed-unity.c:115
 msgid "b"
 msgstr "б"
 
-#: indicator-netspeed-unity.c:100 indicator-netspeed-unity.c:101
+#: indicator-netspeed-unity.c:116 indicator-netspeed-unity.c:117
 msgid "B"
 msgstr "Б"
 
-#: indicator-netspeed-unity.c:106
+#: indicator-netspeed-unity.c:122
 msgid "kb"
 msgstr "кб"
 
-#: indicator-netspeed-unity.c:107
+#: indicator-netspeed-unity.c:123
 msgid "kB"
 msgstr "кБ"
 
-#: indicator-netspeed-unity.c:108
+#: indicator-netspeed-unity.c:124
 msgid "KiB"
 msgstr "КБ"
 
-#: indicator-netspeed-unity.c:113
+#: indicator-netspeed-unity.c:129
 msgid "Mb"
 msgstr "Мб"
 
-#: indicator-netspeed-unity.c:114
+#: indicator-netspeed-unity.c:130
 msgid "MB"
 msgstr "мБ"
 
-#: indicator-netspeed-unity.c:115
+#: indicator-netspeed-unity.c:131
 msgid "MiB"
 msgstr "МБ"
 
-#: indicator-netspeed-unity.c:120
+#: indicator-netspeed-unity.c:136
 msgid "Gb"
 msgstr "Гб"
 
-#: indicator-netspeed-unity.c:121
+#: indicator-netspeed-unity.c:137
 msgid "GB"
 msgstr "гБ"
 
-#: indicator-netspeed-unity.c:122
+#: indicator-netspeed-unity.c:138
 msgid "GiB"
 msgstr "ГБ"
 
-#: indicator-netspeed-unity.c:127
+#: indicator-netspeed-unity.c:143
 msgid "Tb"
 msgstr "Тб"
 
-#: indicator-netspeed-unity.c:128
+#: indicator-netspeed-unity.c:144
 msgid "TB"
 msgstr "тБ"
 
-#: indicator-netspeed-unity.c:129
+#: indicator-netspeed-unity.c:145
 msgid "TiB"
 msgstr "ТБ"
 
-#: indicator-netspeed-unity.c:134
+#: indicator-netspeed-unity.c:150
 msgid "Pb"
 msgstr "Пб"
 
-#: indicator-netspeed-unity.c:135
+#: indicator-netspeed-unity.c:151
 msgid "PB"
 msgstr "пБ"
 
-#: indicator-netspeed-unity.c:136
+#: indicator-netspeed-unity.c:152
 msgid "PiB"
 msgstr "ПБ"
 
-#: indicator-netspeed-unity.c:510 indicator-netspeed-unity.c:518
-#: indicator-netspeed-unity.c:525 indicator-netspeed-unity.c:556
+#: indicator-netspeed-unity.c:551 indicator-netspeed-unity.c:573
+#: indicator-netspeed-unity.c:591 indicator-netspeed-unity.c:609
+#: indicator-netspeed-unity.c:652
 msgid "s"
 msgstr "с"
 
-#: indicator-netspeed-unity.c:653
+#: indicator-netspeed-unity.c:752
 msgid "Settings"
 msgstr "Настройки"
 
-#: indicator-netspeed-unity.c:658
+#: indicator-netspeed-unity.c:757
 msgid "Prefixes"
 msgstr "Приставки"
 
-#: indicator-netspeed-unity.c:664
+#: indicator-netspeed-unity.c:763
 msgid "Binary"
 msgstr "Двоичные"
 
-#: indicator-netspeed-unity.c:668
+#: indicator-netspeed-unity.c:767
 msgid "Decimal"
 msgstr "Десятичные"
 
-#: indicator-netspeed-unity.c:672
+#: indicator-netspeed-unity.c:771
 msgid "Bits"
 msgstr "Биты"
 
-#: indicator-netspeed-unity.c:684
+#: indicator-netspeed-unity.c:783
 msgid "Theme"
 msgstr "Тема"
 
-#: indicator-netspeed-unity.c:690
+#: indicator-netspeed-unity.c:789
 msgid "Dark"
 msgstr "Тёмная"
 
-#: indicator-netspeed-unity.c:694
+#: indicator-netspeed-unity.c:793
 msgid "Light"
 msgstr "Светлая"
 
-#: indicator-netspeed-unity.c:698
+#: indicator-netspeed-unity.c:797
 msgid "Current"
 msgstr "Текущая"
 
-#: indicator-netspeed-unity.c:712
+#: indicator-netspeed-unity.c:814
+msgid "View"
+msgstr "Вид"
+
+#: indicator-netspeed-unity.c:820
+msgid "Normal"
+msgstr "Обычный"
+
+#: indicator-netspeed-unity.c:824
+msgid "Compact"
+msgstr "Компактный"
+
+#: indicator-netspeed-unity.c:828
+msgid "Minimum"
+msgstr "Минимальный"
+
+#: indicator-netspeed-unity.c:841
 msgid "Padding"
 msgstr "Отступ"
 
-#: indicator-netspeed-unity.c:717
+#: indicator-netspeed-unity.c:846
 msgid "Tools"
 msgstr "Инструменты"
 

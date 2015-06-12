@@ -105,6 +105,15 @@ Decimal (1 kilobyte = 1000 byte) = 1;
 Bits (1 kilobit = 1000 bit, 1 kilobyte = 8000 bit) = 2.
       </description>
     </key>
+    <key name="view-mode" type="i">
+      <default>0</default>
+      <summary>View</summary>
+      <description>
+	Normal = 0;
+Compact = 1;
+Minimum = 2.
+      </description>
+    </key>
     <key name="show-settings" type="b">
       <default>true</default>
       <summary>Show settings</summary>
