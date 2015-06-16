@@ -204,18 +204,6 @@ GString * format_net_label(const gchar *in_begin, double bytes, gint show_as, gi
     return string;
 }
 
-const gchar *gsettings_get_value_string (const gchar *key) {
-    return g_settings_get_string( settings, key );
-}
-
-gboolean gsettings_get_value_boolean (const gchar *key) {
-    return g_settings_get_boolean( settings, key );
-}
-
-gint gsettings_get_value_gint (const gchar *key) {
-    return g_settings_get_int( settings, key );
-}
-
 void if_net_down_item_activate(GtkMenuItem *menu_item, gpointer data) {
     posit_item = 1;
     g_settings_set_int( settings, "state", posit_item );
@@ -306,13 +294,13 @@ void theme_current_item_toggled(GtkCheckMenuItem *menu_item, gpointer data) {
     pictures_of_the_current_theme = TRUE;
     g_settings_set_boolean( settings, "pictures-of-the-current-theme", pictures_of_the_current_theme );
 
-    GSTR_SET( pic_network_receive, gsettings_get_value_string("pic-theme-network-receive") );
+    GSTR_SET( pic_network_receive, g_settings_get_string(settings, "pic-theme-network-receive") );
     gtk_image_set_from_icon_name( GTK_IMAGE(net_down_icon), GSTR_GET(pic_network_receive), GTK_ICON_SIZE_MENU );
-    GSTR_SET( pic_network_transmit, gsettings_get_value_string("pic-theme-network-transmit") );
+    GSTR_SET( pic_network_transmit, g_settings_get_string(settings, "pic-theme-network-transmit") );
     gtk_image_set_from_icon_name( GTK_IMAGE(net_up_icon), GSTR_GET(pic_network_transmit), GTK_ICON_SIZE_MENU );
-    GSTR_SET( pic_network_transmit_receive, gsettings_get_value_string("pic-theme-network-transmit-receive") );
+    GSTR_SET( pic_network_transmit_receive, g_settings_get_string(settings, "pic-theme-network-transmit-receive") );
     gtk_image_set_from_icon_name( GTK_IMAGE(net_total_icon), GSTR_GET(pic_network_transmit_receive), GTK_ICON_SIZE_MENU );
-    GSTR_SET( pic_network_idle, gsettings_get_value_string("pic-theme-network-idle") );
+    GSTR_SET( pic_network_idle, g_settings_get_string(settings, "pic-theme-network-idle") );
   }
 }
 
@@ -682,31 +670,31 @@ gint main (gint argc, char **argv)
     GSTR_INIT_TEXT( text_All, "All" );
 
     settings = g_settings_new( "apps.indicators.netspeed-unity" );
-    GSTR_INIT_TEXT( selected_if_name, gsettings_get_value_string("if-name") );
+    GSTR_INIT_TEXT( selected_if_name, g_settings_get_string(settings, "if-name") );
 
-    pictures_of_the_current_theme = gsettings_get_value_boolean( "pictures-of-the-current-theme" );
-    padding_indicator = gsettings_get_value_boolean( "padding-indicator" );
-    show_settings = gsettings_get_value_boolean( "show-settings" );
+    pictures_of_the_current_theme = g_settings_get_boolean( settings, "pictures-of-the-current-theme" );
+    padding_indicator = g_settings_get_boolean( settings, "padding-indicator" );
+    show_settings = g_settings_get_boolean( settings, "show-settings" );
     if (pictures_of_the_current_theme) {
-      GSTR_INIT_TEXT( pic_network_receive, gsettings_get_value_string("pic-theme-network-receive") );
+      GSTR_INIT_TEXT( pic_network_receive, g_settings_get_string(settings, "pic-theme-network-receive") );
       net_down_icon = gtk_image_new_from_icon_name( GSTR_GET(pic_network_receive), GTK_ICON_SIZE_MENU );
-      GSTR_INIT_TEXT( pic_network_transmit, gsettings_get_value_string("pic-theme-network-transmit") );
+      GSTR_INIT_TEXT( pic_network_transmit, g_settings_get_string(settings, "pic-theme-network-transmit") );
       net_up_icon = gtk_image_new_from_icon_name( GSTR_GET(pic_network_transmit), GTK_ICON_SIZE_MENU );
-      GSTR_INIT_TEXT( pic_network_transmit_receive, gsettings_get_value_string("pic-theme-network-transmit-receive") );
+      GSTR_INIT_TEXT( pic_network_transmit_receive, g_settings_get_string(settings, "pic-theme-network-transmit-receive") );
       net_total_icon = gtk_image_new_from_icon_name( GSTR_GET(pic_network_transmit_receive), GTK_ICON_SIZE_MENU );
-      GSTR_INIT_TEXT( pic_network_idle, gsettings_get_value_string("pic-theme-network-idle") );
+      GSTR_INIT_TEXT( pic_network_idle, g_settings_get_string(settings, "pic-theme-network-idle") );
     } else {
-      GSTR_INIT_TEXT( pic_network_receive, gsettings_get_value_string("pic-file-network-receive") );
+      GSTR_INIT_TEXT( pic_network_receive, g_settings_get_string(settings, "pic-file-network-receive") );
       net_down_icon = gtk_image_new_from_file( GSTR_GET(pic_network_receive) );
-      GSTR_INIT_TEXT( pic_network_transmit, gsettings_get_value_string("pic-file-network-transmit") );
+      GSTR_INIT_TEXT( pic_network_transmit, g_settings_get_string(settings, "pic-file-network-transmit") );
       net_up_icon = gtk_image_new_from_file( GSTR_GET(pic_network_transmit) );
-      GSTR_INIT_TEXT( pic_network_transmit_receive, gsettings_get_value_string("pic-file-network-transmit-receive") );
+      GSTR_INIT_TEXT( pic_network_transmit_receive, g_settings_get_string(settings, "pic-file-network-transmit-receive") );
       net_total_icon = gtk_image_new_from_file( GSTR_GET(pic_network_transmit_receive) );
-      GSTR_INIT_TEXT( pic_network_idle, gsettings_get_value_string("pic-file-network-idle") );
+      GSTR_INIT_TEXT( pic_network_idle, g_settings_get_string(settings, "pic-file-network-idle") );
     }
-    posit_item = gsettings_get_value_gint( "state" );
-    show_bin_dec_bit = gsettings_get_value_gint( "show-bin-dec-bit" );
-    view_mode = gsettings_get_value_gint( "view-mode" );
+    posit_item = g_settings_get_int( settings, "state" );
+    show_bin_dec_bit = g_settings_get_int( settings, "show-bin-dec-bit" );
+    view_mode = g_settings_get_int( settings, "view-mode" );
 
     indicator_menu = gtk_menu_new();
 
@@ -873,7 +861,7 @@ gint main (gint argc, char **argv)
 
     //set indicator position. default: all the way left
     //TODO: make this optional so placement can be automatic
-    guint32 ordering_index = gsettings_get_value_gint( "ordering-index" );
+    guint32 ordering_index = g_settings_get_int( settings, "ordering-index" );
     app_indicator_set_ordering_index( indicator, ordering_index );
 
     update();

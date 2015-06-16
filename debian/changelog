@@ -1,3 +1,9 @@
+indicator-netspeed-unity (1.03-trusty0) trusty; urgency=medium
+
+  * Added Hungarian translation.
+
+ -- Gleb Golovachev <golovachev.gleb@gmail.com>  Tue, 16 Jun 2015 11:11:00 +0500
+
 indicator-netspeed-unity (1.02-trusty0) trusty; urgency=medium
 
   * Added option "View"

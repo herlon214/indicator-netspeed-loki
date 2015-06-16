@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: indicator-netspeed-unity 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-12 17:35+0500\n"
+"POT-Creation-Date: 2015-06-16 10:44+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,69 +85,69 @@ msgstr "PB"
 msgid "PiB"
 msgstr "PiB"
 
-#: indicator-netspeed-unity.c:551 indicator-netspeed-unity.c:573
-#: indicator-netspeed-unity.c:591 indicator-netspeed-unity.c:609
-#: indicator-netspeed-unity.c:652
+#: indicator-netspeed-unity.c:539 indicator-netspeed-unity.c:561
+#: indicator-netspeed-unity.c:579 indicator-netspeed-unity.c:597
+#: indicator-netspeed-unity.c:640
 msgid "s"
 msgstr "s"
 
-#: indicator-netspeed-unity.c:752
+#: indicator-netspeed-unity.c:740
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: indicator-netspeed-unity.c:757
+#: indicator-netspeed-unity.c:745
 msgid "Prefixes"
 msgstr "Präfixe"
 
-#: indicator-netspeed-unity.c:763
+#: indicator-netspeed-unity.c:751
 msgid "Binary"
 msgstr "binär"
 
-#: indicator-netspeed-unity.c:767
+#: indicator-netspeed-unity.c:755
 msgid "Decimal"
 msgstr "Dezimal"
 
-#: indicator-netspeed-unity.c:771
+#: indicator-netspeed-unity.c:759
 msgid "Bits"
 msgstr "Bits"
 
-#: indicator-netspeed-unity.c:783
+#: indicator-netspeed-unity.c:771
 msgid "Theme"
 msgstr "Thema"
 
-#: indicator-netspeed-unity.c:789
+#: indicator-netspeed-unity.c:777
 msgid "Dark"
 msgstr "Dunkel"
 
-#: indicator-netspeed-unity.c:793
+#: indicator-netspeed-unity.c:781
 msgid "Light"
 msgstr "Licht"
 
-#: indicator-netspeed-unity.c:797
+#: indicator-netspeed-unity.c:785
 msgid "Current"
 msgstr "Aktuell"
 
-#: indicator-netspeed-unity.c:814
+#: indicator-netspeed-unity.c:802
 msgid "View"
 msgstr "Ansicht"
 
-#: indicator-netspeed-unity.c:820
+#: indicator-netspeed-unity.c:808
 msgid "Normal"
 msgstr "Normal"
 
-#: indicator-netspeed-unity.c:824
+#: indicator-netspeed-unity.c:812
 msgid "Compact"
 msgstr "Kompakt"
 
-#: indicator-netspeed-unity.c:828
+#: indicator-netspeed-unity.c:816
 msgid "Minimum"
 msgstr "Minimum"
 
-#: indicator-netspeed-unity.c:841
+#: indicator-netspeed-unity.c:829
 msgid "Padding"
 msgstr "Innenabstand"
 
-#: indicator-netspeed-unity.c:846
+#: indicator-netspeed-unity.c:834
 msgid "Tools"
 msgstr "Werkzeuge"
 
