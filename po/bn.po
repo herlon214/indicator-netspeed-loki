@@ -1,0 +1,155 @@
+# Bengali translation for netspeed-appindicator
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the netspeed-appindicator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: netspeed-appindicator\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-06-12 19:08+0500\n"
+"PO-Revision-Date: 2015-10-16 04:18+0000\n"
+"Last-Translator: Nazir Ahmed Sabbir <na_sabbir@yahoo.com>\n"
+"Language-Team: Bengali <bn@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-11-04 17:56+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
+
+#: indicator-netspeed-unity.c:115
+msgid "b"
+msgstr "ব"
+
+#: indicator-netspeed-unity.c:116 indicator-netspeed-unity.c:117
+msgid "B"
+msgstr "ব"
+
+#: indicator-netspeed-unity.c:122
+msgid "kb"
+msgstr "কিল‌োবিট"
+
+#: indicator-netspeed-unity.c:123
+msgid "kB"
+msgstr "কিলোবাইট"
+
+#: indicator-netspeed-unity.c:124
+msgid "KiB"
+msgstr "কিবিবাইট"
+
+#: indicator-netspeed-unity.c:129
+msgid "Mb"
+msgstr "মেগাবিট"
+
+#: indicator-netspeed-unity.c:130
+msgid "MB"
+msgstr "মেগাবাইট"
+
+#: indicator-netspeed-unity.c:131
+msgid "MiB"
+msgstr "মেবিবাইট"
+
+#: indicator-netspeed-unity.c:136
+msgid "Gb"
+msgstr "গিগাবিট"
+
+#: indicator-netspeed-unity.c:137
+msgid "GB"
+msgstr "গিগাবাইট"
+
+#: indicator-netspeed-unity.c:138
+msgid "GiB"
+msgstr "গিবিবাইট"
+
+#: indicator-netspeed-unity.c:143
+msgid "Tb"
+msgstr "টেরাবিট"
+
+#: indicator-netspeed-unity.c:144
+msgid "TB"
+msgstr "টেরাবাইট"
+
+#: indicator-netspeed-unity.c:145
+msgid "TiB"
+msgstr "টেবিবাইট"
+
+#: indicator-netspeed-unity.c:150
+msgid "Pb"
+msgstr "পেবিবিট"
+
+#: indicator-netspeed-unity.c:151
+msgid "PB"
+msgstr "পেবিবাইট"
+
+#: indicator-netspeed-unity.c:152
+msgid "PiB"
+msgstr "পেবিবাইট"
+
+#: indicator-netspeed-unity.c:551 indicator-netspeed-unity.c:573
+#: indicator-netspeed-unity.c:591 indicator-netspeed-unity.c:609
+#: indicator-netspeed-unity.c:652
+msgid "s"
+msgstr "স"
+
+#: indicator-netspeed-unity.c:752
+msgid "Settings"
+msgstr "সেটিংস"
+
+#: indicator-netspeed-unity.c:757
+msgid "Prefixes"
+msgstr "সূচি"
+
+#: indicator-netspeed-unity.c:763
+msgid "Binary"
+msgstr "বাইনারি"
+
+#: indicator-netspeed-unity.c:767
+msgid "Decimal"
+msgstr "দশমিক"
+
+#: indicator-netspeed-unity.c:771
+msgid "Bits"
+msgstr "বিটস"
+
+#: indicator-netspeed-unity.c:783
+msgid "Theme"
+msgstr "থিম"
+
+#: indicator-netspeed-unity.c:789
+msgid "Dark"
+msgstr "গাঢ়"
+
+#: indicator-netspeed-unity.c:793
+msgid "Light"
+msgstr "উজ্জল"
+
+#: indicator-netspeed-unity.c:797
+msgid "Current"
+msgstr "বর্তমান"
+
+#: indicator-netspeed-unity.c:814
+msgid "View"
+msgstr "প্রদর্শন"
+
+#: indicator-netspeed-unity.c:820
+msgid "Normal"
+msgstr "সাধারণ"
+
+#: indicator-netspeed-unity.c:824
+msgid "Compact"
+msgstr "সংক্ষিপ্ত"
+
+#: indicator-netspeed-unity.c:828
+msgid "Minimum"
+msgstr "সর্বনিম্ন"
+
+#: indicator-netspeed-unity.c:841
+msgid "Padding"
+msgstr "প্যাডিং"
+
+#: indicator-netspeed-unity.c:846
+msgid "Tools"
+msgstr "যন্ত্রাদি"
+
+msgid "All"
+msgstr "সবগুলো"
