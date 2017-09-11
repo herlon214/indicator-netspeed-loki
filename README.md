@@ -1,5 +1,7 @@
-Network speed indicator for Unity (working on Elementary OS (Loki) )
+Network speed indicator for Loki
 =================================
+
+Elementary OS (Loki) implementation of Network speed Unity with ping's response time.
 
 ![](./screenshot.png)
 
