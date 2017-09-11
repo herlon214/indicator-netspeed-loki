@@ -1,7 +1,7 @@
 Network speed indicator for Unity
 =================================
 
-![](https://raw.github.com/GGleb/indicator-netspeed-unity/master/screenshot.png)
+![](./screenshot.png)
 
 Usage
 -----
