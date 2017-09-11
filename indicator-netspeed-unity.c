@@ -20,6 +20,8 @@ License: this software is in the public domain.
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <signal.h>
 
 #define GETTEXT_PACKAGE "indicator-netspeed-unity"
 #define LOCALEDIR "/usr/share/locale"
@@ -100,8 +102,9 @@ void if_signal_select(GtkMenuItem *menu_item, gpointer data);
 gboolean update();
 
 char* do_ping() {
+  char * value;
+  int statval;
   int link[2];
-  char * pch;
   pid_t pid;
   char foo[4096];
 
@@ -116,20 +119,23 @@ char* do_ping() {
     dup2 (link[1], STDOUT_FILENO);
     close(link[0]);
     close(link[1]);
-    execl("/bin/ping", "ping", "8.8.8.8 -c 1", (char *)0);
+    execl("/bin/ping", "ping", "8.8.8.8", "-c", "1", NULL);
     die("execl");
 
   } else {
 
     close(link[1]);
-    int nbytes = read(link[0], foo, sizeof(foo));
-    pch = strtok (foo, "=");
-    pch = strtok (NULL, "=");
-    pch = strtok (NULL, "=");
-    pch = strtok (NULL, "=");
-    pch[strlen(pch) - 1] = 0;
+    read(link[0], foo, sizeof(foo));
+    value = strtok (foo, "=");
+    value = strtok (NULL, "=");
+    value = strtok (NULL, "=");
+    value = strtok (NULL, "=");
+    value = strtok (value, " ");
 
-    return pch;
+    wait(NULL);
+
+    return strcat(value, " ms");
+    
   }
 }
 
@@ -599,7 +605,7 @@ gboolean update() {
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
         tmp_s = get_ms();
         GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s/%s %s/%s %s", GSTR_GET(tmp_s1), _("s"), GSTR_GET(tmp_s2), _("s"), GSTR_GET(tmp_s3), _("s") );
+        g_string_printf( indicator_label, "%s/%s %s/%s - %s", GSTR_GET(tmp_s1), _("s"), GSTR_GET(tmp_s2), _("s"), GSTR_GET(tmp_s3), _("s") );
       }
       else if( view_mode == 1) {
         tmp_s = format_net_label( "↓", (double)net_down, show_bin_dec_bit, view_mode, false, padding_indicator );
@@ -608,7 +614,7 @@ gboolean update() {
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
         tmp_s = get_ms();
         GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s %s %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3) );
+        g_string_printf( indicator_label, "%s %s %s - %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3) );
       }
       else {
         tmp_s = format_net_label( "", (double)net_down, show_bin_dec_bit, view_mode, false, padding_indicator );
@@ -617,7 +623,7 @@ gboolean update() {
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
         tmp_s = get_ms();
         GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s %s %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3));
+        g_string_printf( indicator_label, "%s %s %s - %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3));
       }
     }
     else if (posit_item == 1)

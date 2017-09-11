@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: indicator-netspeed-unity 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-11 14:12-0400\n"
+"POT-Creation-Date: 2017-09-11 16:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,141 +17,141 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: indicator-netspeed-unity.c:169
+#: indicator-netspeed-unity.c:175
 msgid "b"
 msgstr "б"
 
-#: indicator-netspeed-unity.c:170 indicator-netspeed-unity.c:171
+#: indicator-netspeed-unity.c:176 indicator-netspeed-unity.c:177
 msgid "B"
 msgstr "Б"
 
-#: indicator-netspeed-unity.c:176
+#: indicator-netspeed-unity.c:182
 msgid "kb"
 msgstr "кб"
 
-#: indicator-netspeed-unity.c:177
+#: indicator-netspeed-unity.c:183
 msgid "kB"
 msgstr "кБ"
 
-#: indicator-netspeed-unity.c:178
+#: indicator-netspeed-unity.c:184
 msgid "KiB"
 msgstr "КіБ"
 
-#: indicator-netspeed-unity.c:183
+#: indicator-netspeed-unity.c:189
 msgid "Mb"
 msgstr "Мб"
 
-#: indicator-netspeed-unity.c:184
+#: indicator-netspeed-unity.c:190
 msgid "MB"
 msgstr "МБ"
 
-#: indicator-netspeed-unity.c:185
+#: indicator-netspeed-unity.c:191
 msgid "MiB"
 msgstr "МіБ"
 
-#: indicator-netspeed-unity.c:190
+#: indicator-netspeed-unity.c:196
 msgid "Gb"
 msgstr "Гб"
 
-#: indicator-netspeed-unity.c:191
+#: indicator-netspeed-unity.c:197
 msgid "GB"
 msgstr "ГБ"
 
-#: indicator-netspeed-unity.c:192
+#: indicator-netspeed-unity.c:198
 msgid "GiB"
 msgstr "ГіБ"
 
-#: indicator-netspeed-unity.c:197
+#: indicator-netspeed-unity.c:203
 msgid "Tb"
 msgstr "Тб"
 
-#: indicator-netspeed-unity.c:198
+#: indicator-netspeed-unity.c:204
 msgid "TB"
 msgstr "ТБ"
 
-#: indicator-netspeed-unity.c:199
+#: indicator-netspeed-unity.c:205
 msgid "TiB"
 msgstr "ТіБ"
 
-#: indicator-netspeed-unity.c:204
+#: indicator-netspeed-unity.c:210
 msgid "Pb"
 msgstr "Пб"
 
-#: indicator-netspeed-unity.c:205
+#: indicator-netspeed-unity.c:211
 msgid "PB"
 msgstr "ПБ"
 
-#: indicator-netspeed-unity.c:206
+#: indicator-netspeed-unity.c:212
 msgid "PiB"
 msgstr "ПіБ"
 
-#: indicator-netspeed-unity.c:602 indicator-netspeed-unity.c:628
-#: indicator-netspeed-unity.c:646 indicator-netspeed-unity.c:664
-#: indicator-netspeed-unity.c:707
+#: indicator-netspeed-unity.c:608 indicator-netspeed-unity.c:634
+#: indicator-netspeed-unity.c:652 indicator-netspeed-unity.c:670
+#: indicator-netspeed-unity.c:713
 msgid "s"
 msgstr "с"
 
-#: indicator-netspeed-unity.c:808
+#: indicator-netspeed-unity.c:814
 msgid "Settings"
 msgstr "Параметри"
 
-#: indicator-netspeed-unity.c:813
+#: indicator-netspeed-unity.c:819
 msgid "Prefixes"
 msgstr "Префікси"
 
-#: indicator-netspeed-unity.c:819
+#: indicator-netspeed-unity.c:825
 msgid "Binary"
 msgstr "Двійкові"
 
-#: indicator-netspeed-unity.c:823
+#: indicator-netspeed-unity.c:829
 msgid "Decimal"
 msgstr "Десяткові"
 
-#: indicator-netspeed-unity.c:827
+#: indicator-netspeed-unity.c:833
 msgid "Bits"
 msgstr "Біт"
 
-#: indicator-netspeed-unity.c:839
+#: indicator-netspeed-unity.c:845
 msgid "Theme"
 msgstr "Тема"
 
-#: indicator-netspeed-unity.c:845
+#: indicator-netspeed-unity.c:851
 msgid "Dark"
 msgstr "Темна"
 
-#: indicator-netspeed-unity.c:849
+#: indicator-netspeed-unity.c:855
 msgid "Light"
 msgstr "Світла"
 
-#: indicator-netspeed-unity.c:853
+#: indicator-netspeed-unity.c:859
 msgid "Current"
 msgstr "Поточна"
 
-#: indicator-netspeed-unity.c:870
+#: indicator-netspeed-unity.c:876
 msgid "View"
 msgstr "Перегляд"
 
-#: indicator-netspeed-unity.c:876
+#: indicator-netspeed-unity.c:882
 msgid "Normal"
 msgstr "Звичайний"
 
-#: indicator-netspeed-unity.c:880
+#: indicator-netspeed-unity.c:886
 msgid "Compact"
 msgstr "Компактний"
 
-#: indicator-netspeed-unity.c:884
+#: indicator-netspeed-unity.c:890
 msgid "Minimum"
 msgstr "Мінімальний"
 
-#: indicator-netspeed-unity.c:897
+#: indicator-netspeed-unity.c:903
 msgid "Padding"
 msgstr "Заповнення"
 
-#: indicator-netspeed-unity.c:902
+#: indicator-netspeed-unity.c:908
 msgid "Ping"
 msgstr ""
 
-#: indicator-netspeed-unity.c:907
+#: indicator-netspeed-unity.c:913
 msgid "Tools"
 msgstr "Інструменти"
 
