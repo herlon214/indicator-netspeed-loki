@@ -12,6 +12,11 @@
       <summary>pictures of the current theme</summary>
       <description>pictures from the current theme or from a file</description>
     </key>
+    <key name="ping-indicator" type="b">
+      <default>true</default>
+      <summary>ping indicator</summary>
+      <description>show ping response time</description>
+    </key>
     <key name="padding-indicator" type="b">
       <default>false</default>
       <summary>padding indicator</summary>

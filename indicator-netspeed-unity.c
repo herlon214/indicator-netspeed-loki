@@ -17,6 +17,9 @@ License: this software is in the public domain.
 #include <gio/gio.h>
 #include <stdbool.h>
 #include <glib/gi18n.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define GETTEXT_PACKAGE "indicator-netspeed-unity"
 #define LOCALEDIR "/usr/share/locale"
@@ -26,6 +29,7 @@ License: this software is in the public domain.
 #define GSTR_FREE(a) (g_string_free((a), TRUE))
 #define GSTR_GET(a) ((a)->str)
 #define GSTR_SET(a,b) (g_string_assign((a),(b)))
+#define die(e) do { fprintf(stderr, "%s", e); exit(EXIT_FAILURE); } while (0);
 
 /* update period in seconds */
 gint period = 1;
@@ -42,6 +46,7 @@ GString * text_All = NULL;
 GString * selected_if_name = NULL;
 gboolean pictures_of_the_current_theme = FALSE;
 gboolean padding_indicator = FALSE;
+gboolean ping_indicator = TRUE;
 GString * pic_network_transmit_receive = NULL;
 GString * pic_network_receive = NULL;
 GString * pic_network_transmit = NULL;
@@ -77,6 +82,7 @@ GtkWidget *view_normal_item = NULL;
 GtkWidget *view_compact_item = NULL;
 GtkWidget *view_minimum_item = NULL;
 GtkWidget *padding_item = NULL;
+GtkWidget *ping_item = NULL;
 GtkWidget *tools_item = NULL;
 GtkWidget *tools_sub = NULL;
 GList* tools_items_list = NULL;
@@ -93,6 +99,54 @@ gint view_mode = 0;
 void if_signal_select(GtkMenuItem *menu_item, gpointer data);
 gboolean update();
 
+char* do_ping() {
+  int link[2];
+  char * pch;
+  pid_t pid;
+  char foo[4096];
+
+  if (pipe(link)==-1)
+    die("pipe");
+
+  if ((pid = fork()) == -1)
+    die("fork");
+
+  if(pid == 0) {
+
+    dup2 (link[1], STDOUT_FILENO);
+    close(link[0]);
+    close(link[1]);
+    execl("/bin/ping", "ping", "8.8.8.8 -c 1", (char *)0);
+    die("execl");
+
+  } else {
+
+    close(link[1]);
+    int nbytes = read(link[0], foo, sizeof(foo));
+    pch = strtok (foo, "=");
+    pch = strtok (NULL, "=");
+    pch = strtok (NULL, "=");
+    pch = strtok (NULL, "=");
+    pch[strlen(pch) - 1] = 0;
+
+    return pch;
+  }
+}
+
+/**
+ * Set ping response 
+ */
+GString * get_ms() {
+  GString * ms;
+  GSTR_INIT( ms );
+
+  if(ping_indicator) {
+    GSTR_SET( ms, _(do_ping()) );
+  }
+  
+
+  return ms;
+}
 
 GString * format_net_label(const gchar *in_begin, double bytes, gint show_as, gint view_as, gboolean less_kilo, gboolean padding)
 {
@@ -224,6 +278,11 @@ void if_net_total_item_activate(GtkMenuItem *menu_item, gpointer data) {
 void padding_item_toggled(GtkCheckMenuItem *menu_item, gpointer data) {
     padding_indicator = gtk_check_menu_item_get_active( menu_item );
     g_settings_set_boolean( settings, "padding-indicator", padding_indicator );
+}
+
+void ping_item_toggled(GtkCheckMenuItem *menu_item, gpointer data) {
+  ping_indicator = gtk_check_menu_item_get_active( menu_item );
+  g_settings_set_boolean( settings, "ping-indicator", ping_indicator);
 }
 
 void prefixes_binary_item_toggled(GtkCheckMenuItem *menu_item, gpointer data) {
@@ -527,8 +586,10 @@ gboolean update() {
     GString * tmp_s = NULL;
     GString * tmp_s1;
     GString * tmp_s2;
+    GString * tmp_s3;
     GSTR_INIT( tmp_s1 );
     GSTR_INIT( tmp_s2 );
+    GSTR_INIT( tmp_s3 );
 
     if (posit_item == 0) {
       if( view_mode == 0) {
@@ -536,21 +597,27 @@ gboolean update() {
         GSTR_SET( tmp_s1, GSTR_GET(tmp_s) );
         tmp_s = format_net_label( "↑:", (double)net_up, show_bin_dec_bit, view_mode, false, padding_indicator );
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s/%s %s/%s", GSTR_GET(tmp_s1), _("s"), GSTR_GET(tmp_s2), _("s") );
+        tmp_s = get_ms();
+        GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
+        g_string_printf( indicator_label, "%s/%s %s/%s %s", GSTR_GET(tmp_s1), _("s"), GSTR_GET(tmp_s2), _("s"), GSTR_GET(tmp_s3), _("s") );
       }
       else if( view_mode == 1) {
         tmp_s = format_net_label( "↓", (double)net_down, show_bin_dec_bit, view_mode, false, padding_indicator );
         GSTR_SET( tmp_s1, GSTR_GET(tmp_s) );
         tmp_s = format_net_label( "↑", (double)net_up, show_bin_dec_bit, view_mode, false, padding_indicator );
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2) );
+        tmp_s = get_ms();
+        GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
+        g_string_printf( indicator_label, "%s %s %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3) );
       }
       else {
         tmp_s = format_net_label( "", (double)net_down, show_bin_dec_bit, view_mode, false, padding_indicator );
         GSTR_SET( tmp_s1, GSTR_GET(tmp_s) );
         tmp_s = format_net_label( "", (double)net_up, show_bin_dec_bit, view_mode, false, padding_indicator );
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2) );
+        tmp_s = get_ms();
+        GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
+        g_string_printf( indicator_label, "%s %s %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3));
       }
     }
     else if (posit_item == 1)
@@ -657,6 +724,7 @@ gboolean update() {
 
     GSTR_FREE( tmp_s1 );
     GSTR_FREE( tmp_s2 );
+    GSTR_FREE( tmp_s3 );
     return TRUE;
 }
 
@@ -830,6 +898,11 @@ gint main (gint argc, char **argv)
      gtk_check_menu_item_set_active( GTK_CHECK_MENU_ITEM(padding_item), padding_indicator );
      gtk_menu_shell_append( GTK_MENU_SHELL(settings_sub), padding_item );
      g_signal_connect( G_OBJECT(padding_item), "toggled", G_CALLBACK(padding_item_toggled), NULL );
+//---
+    ping_item = gtk_check_menu_item_new_with_label( _("Ping") );
+    gtk_check_menu_item_set_active( GTK_CHECK_MENU_ITEM(ping_item), ping_indicator );
+    gtk_menu_shell_append( GTK_MENU_SHELL(settings_sub), ping_item );
+    g_signal_connect( G_OBJECT(ping_item), "toggled", G_CALLBACK(ping_item_toggled), NULL );
 //---
      tools_item = gtk_menu_item_new_with_label( _("Tools") );
      gtk_menu_shell_append( GTK_MENU_SHELL(settings_sub), tools_item );

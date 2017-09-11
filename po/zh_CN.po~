@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netspeed-appindicator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-11 14:12-0400\n"
+"POT-Creation-Date: 2017-09-11 14:05-0400\n"
 "PO-Revision-Date: 2015-11-05 04:34+0000\n"
 "Last-Translator: zjn312 <zjn4530@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -18,141 +18,141 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-03-28 11:08+0000\n"
 "X-Generator: Launchpad (build 17967)\n"
 
-#: indicator-netspeed-unity.c:169
+#: indicator-netspeed-unity.c:184
 msgid "b"
 msgstr "b"
 
-#: indicator-netspeed-unity.c:170 indicator-netspeed-unity.c:171
+#: indicator-netspeed-unity.c:185 indicator-netspeed-unity.c:186
 msgid "B"
 msgstr "B"
 
-#: indicator-netspeed-unity.c:176
+#: indicator-netspeed-unity.c:191
 msgid "kb"
 msgstr "kb"
 
-#: indicator-netspeed-unity.c:177
+#: indicator-netspeed-unity.c:192
 msgid "kB"
 msgstr "kB"
 
-#: indicator-netspeed-unity.c:178
+#: indicator-netspeed-unity.c:193
 msgid "KiB"
 msgstr "KiB"
 
-#: indicator-netspeed-unity.c:183
+#: indicator-netspeed-unity.c:198
 msgid "Mb"
 msgstr "Mb"
 
-#: indicator-netspeed-unity.c:184
+#: indicator-netspeed-unity.c:199
 msgid "MB"
 msgstr "MB"
 
-#: indicator-netspeed-unity.c:185
+#: indicator-netspeed-unity.c:200
 msgid "MiB"
 msgstr "MiB"
 
-#: indicator-netspeed-unity.c:190
+#: indicator-netspeed-unity.c:205
 msgid "Gb"
 msgstr "Gb"
 
-#: indicator-netspeed-unity.c:191
+#: indicator-netspeed-unity.c:206
 msgid "GB"
 msgstr "GB"
 
-#: indicator-netspeed-unity.c:192
+#: indicator-netspeed-unity.c:207
 msgid "GiB"
 msgstr "GiB"
 
-#: indicator-netspeed-unity.c:197
+#: indicator-netspeed-unity.c:212
 msgid "Tb"
 msgstr "Tb"
 
-#: indicator-netspeed-unity.c:198
+#: indicator-netspeed-unity.c:213
 msgid "TB"
 msgstr "TB"
 
-#: indicator-netspeed-unity.c:199
+#: indicator-netspeed-unity.c:214
 msgid "TiB"
 msgstr "TiB"
 
-#: indicator-netspeed-unity.c:204
+#: indicator-netspeed-unity.c:219
 msgid "Pb"
 msgstr "Pb"
 
-#: indicator-netspeed-unity.c:205
+#: indicator-netspeed-unity.c:220
 msgid "PB"
 msgstr "PB"
 
-#: indicator-netspeed-unity.c:206
+#: indicator-netspeed-unity.c:221
 msgid "PiB"
 msgstr "PiB"
 
-#: indicator-netspeed-unity.c:602 indicator-netspeed-unity.c:628
-#: indicator-netspeed-unity.c:646 indicator-netspeed-unity.c:664
-#: indicator-netspeed-unity.c:707
+#: indicator-netspeed-unity.c:617 indicator-netspeed-unity.c:643
+#: indicator-netspeed-unity.c:661 indicator-netspeed-unity.c:679
+#: indicator-netspeed-unity.c:722
 msgid "s"
 msgstr "s"
 
-#: indicator-netspeed-unity.c:808
+#: indicator-netspeed-unity.c:823
 msgid "Settings"
 msgstr "设置"
 
-#: indicator-netspeed-unity.c:813
+#: indicator-netspeed-unity.c:828
 msgid "Prefixes"
 msgstr "前缀"
 
-#: indicator-netspeed-unity.c:819
+#: indicator-netspeed-unity.c:834
 msgid "Binary"
 msgstr "二进制"
 
-#: indicator-netspeed-unity.c:823
+#: indicator-netspeed-unity.c:838
 msgid "Decimal"
 msgstr "十进制"
 
-#: indicator-netspeed-unity.c:827
+#: indicator-netspeed-unity.c:842
 msgid "Bits"
 msgstr "Bits"
 
-#: indicator-netspeed-unity.c:839
+#: indicator-netspeed-unity.c:854
 msgid "Theme"
 msgstr "主题"
 
-#: indicator-netspeed-unity.c:845
+#: indicator-netspeed-unity.c:860
 msgid "Dark"
 msgstr "深色"
 
-#: indicator-netspeed-unity.c:849
+#: indicator-netspeed-unity.c:864
 msgid "Light"
 msgstr "浅色"
 
-#: indicator-netspeed-unity.c:853
+#: indicator-netspeed-unity.c:868
 msgid "Current"
 msgstr "当前"
 
-#: indicator-netspeed-unity.c:870
+#: indicator-netspeed-unity.c:885
 msgid "View"
 msgstr "查看"
 
-#: indicator-netspeed-unity.c:876
+#: indicator-netspeed-unity.c:891
 msgid "Normal"
 msgstr "普通"
 
-#: indicator-netspeed-unity.c:880
+#: indicator-netspeed-unity.c:895
 msgid "Compact"
 msgstr "紧凑"
 
-#: indicator-netspeed-unity.c:884
+#: indicator-netspeed-unity.c:899
 msgid "Minimum"
 msgstr "最小值"
 
-#: indicator-netspeed-unity.c:897
+#: indicator-netspeed-unity.c:912
 msgid "Padding"
 msgstr "内边距"
 
-#: indicator-netspeed-unity.c:902
+#: indicator-netspeed-unity.c:917
 msgid "Ping"
 msgstr ""
 
-#: indicator-netspeed-unity.c:907
+#: indicator-netspeed-unity.c:922
 msgid "Tools"
 msgstr "工具"
 
