@@ -21,7 +21,7 @@ License: this software is in the public domain.
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
-#include <signal.h>
+#include <sys/wait.h>
 
 #define GETTEXT_PACKAGE "indicator-netspeed-unity"
 #define LOCALEDIR "/usr/share/locale"
@@ -44,6 +44,7 @@ AppIndicator *indicator = NULL;
 GtkWidget *indicator_menu = NULL;
 GtkWidget *interfaces_menu = NULL;
 
+GString * ping_gtk = NULL;
 GString * text_All = NULL;
 GString * selected_if_name = NULL;
 gboolean pictures_of_the_current_theme = FALSE;
@@ -101,9 +102,8 @@ gint view_mode = 0;
 void if_signal_select(GtkMenuItem *menu_item, gpointer data);
 gboolean update();
 
-char* do_ping() {
-  char * value;
-  int statval;
+gboolean do_ping() {
+  char * ping_value;
   int link[2];
   pid_t pid;
   char foo[4096];
@@ -126,15 +126,17 @@ char* do_ping() {
 
     close(link[1]);
     read(link[0], foo, sizeof(foo));
-    value = strtok (foo, "=");
-    value = strtok (NULL, "=");
-    value = strtok (NULL, "=");
-    value = strtok (NULL, "=");
-    value = strtok (value, " ");
+    ping_value = strtok (foo, "=");
+    ping_value = strtok (NULL, "=");
+    ping_value = strtok (NULL, "=");
+    ping_value = strtok (NULL, "=");
+    ping_value = strtok (ping_value, " ");
+
+    GSTR_SET(ping_gtk, _(ping_value));
 
     wait(NULL);
 
-    return strcat(value, " ms");
+    return TRUE;
     
   }
 }
@@ -143,15 +145,8 @@ char* do_ping() {
  * Set ping response 
  */
 GString * get_ms() {
-  GString * ms;
-  GSTR_INIT( ms );
 
-  if(ping_indicator) {
-    GSTR_SET( ms, _(do_ping()) );
-  }
-  
-
-  return ms;
+  return ping_gtk;
 }
 
 GString * format_net_label(const gchar *in_begin, double bytes, gint show_as, gint view_as, gboolean less_kilo, gboolean padding)
@@ -605,7 +600,7 @@ gboolean update() {
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
         tmp_s = get_ms();
         GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s/%s %s/%s - %s", GSTR_GET(tmp_s1), _("s"), GSTR_GET(tmp_s2), _("s"), GSTR_GET(tmp_s3), _("s") );
+        g_string_printf( indicator_label, "%s/%s %s/%s - %sms", GSTR_GET(tmp_s1), _("s"), GSTR_GET(tmp_s2), _("s"), GSTR_GET(tmp_s3));
       }
       else if( view_mode == 1) {
         tmp_s = format_net_label( "↓", (double)net_down, show_bin_dec_bit, view_mode, false, padding_indicator );
@@ -614,7 +609,7 @@ gboolean update() {
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
         tmp_s = get_ms();
         GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s %s %s - %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3) );
+        g_string_printf( indicator_label, "%s %s %s - %sms", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3) );
       }
       else {
         tmp_s = format_net_label( "", (double)net_down, show_bin_dec_bit, view_mode, false, padding_indicator );
@@ -623,7 +618,7 @@ gboolean update() {
         GSTR_SET( tmp_s2, GSTR_GET(tmp_s) );
         tmp_s = get_ms();
         GSTR_SET( tmp_s3, GSTR_GET(tmp_s) );
-        g_string_printf( indicator_label, "%s %s %s - %s", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3));
+        g_string_printf( indicator_label, "%s %s %s - %sms", GSTR_GET(tmp_s1), GSTR_GET(tmp_s2), GSTR_GET(tmp_s3));
       }
     }
     else if (posit_item == 1)
@@ -742,6 +737,7 @@ gint main (gint argc, char **argv)
     gtk_init ( &argc, &argv );
 
     GSTR_INIT_TEXT( text_All, "All" );
+    GSTR_INIT_TEXT( ping_gtk, "0" );
 
     settings = g_settings_new( "apps.indicators.netspeed-unity" );
     GSTR_INIT_TEXT( selected_if_name, g_settings_get_string(settings, "if-name") );
@@ -947,6 +943,7 @@ gint main (gint argc, char **argv)
 
     /* update period in milliseconds */
     g_timeout_add( 1000*period, update, NULL );
+    g_timeout_add( 3000, do_ping, NULL );
 
     gtk_main ();
 

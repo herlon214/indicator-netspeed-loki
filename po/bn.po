@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: netspeed-appindicator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-11 16:59-0400\n"
+"POT-Creation-Date: 2017-09-11 18:52-0400\n"
 "PO-Revision-Date: 2015-10-16 04:18+0000\n"
 "Last-Translator: Nazir Ahmed Sabbir <na_sabbir@yahoo.com>\n"
 "Language-Team: Bengali <bn@li.org>\n"
@@ -18,141 +18,141 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-11-04 17:56+0000\n"
 "X-Generator: Launchpad (build 17838)\n"
 
-#: indicator-netspeed-unity.c:175
+#: indicator-netspeed-unity.c:170
 msgid "b"
 msgstr "ব"
 
-#: indicator-netspeed-unity.c:176 indicator-netspeed-unity.c:177
+#: indicator-netspeed-unity.c:171 indicator-netspeed-unity.c:172
 msgid "B"
 msgstr "ব"
 
-#: indicator-netspeed-unity.c:182
+#: indicator-netspeed-unity.c:177
 msgid "kb"
 msgstr "কিল‌োবিট"
 
-#: indicator-netspeed-unity.c:183
+#: indicator-netspeed-unity.c:178
 msgid "kB"
 msgstr "কিলোবাইট"
 
-#: indicator-netspeed-unity.c:184
+#: indicator-netspeed-unity.c:179
 msgid "KiB"
 msgstr "কিবিবাইট"
 
-#: indicator-netspeed-unity.c:189
+#: indicator-netspeed-unity.c:184
 msgid "Mb"
 msgstr "মেগাবিট"
 
-#: indicator-netspeed-unity.c:190
+#: indicator-netspeed-unity.c:185
 msgid "MB"
 msgstr "মেগাবাইট"
 
-#: indicator-netspeed-unity.c:191
+#: indicator-netspeed-unity.c:186
 msgid "MiB"
 msgstr "মেবিবাইট"
 
-#: indicator-netspeed-unity.c:196
+#: indicator-netspeed-unity.c:191
 msgid "Gb"
 msgstr "গিগাবিট"
 
-#: indicator-netspeed-unity.c:197
+#: indicator-netspeed-unity.c:192
 msgid "GB"
 msgstr "গিগাবাইট"
 
-#: indicator-netspeed-unity.c:198
+#: indicator-netspeed-unity.c:193
 msgid "GiB"
 msgstr "গিবিবাইট"
 
-#: indicator-netspeed-unity.c:203
+#: indicator-netspeed-unity.c:198
 msgid "Tb"
 msgstr "টেরাবিট"
 
-#: indicator-netspeed-unity.c:204
+#: indicator-netspeed-unity.c:199
 msgid "TB"
 msgstr "টেরাবাইট"
 
-#: indicator-netspeed-unity.c:205
+#: indicator-netspeed-unity.c:200
 msgid "TiB"
 msgstr "টেবিবাইট"
 
-#: indicator-netspeed-unity.c:210
+#: indicator-netspeed-unity.c:205
 msgid "Pb"
 msgstr "পেবিবিট"
 
-#: indicator-netspeed-unity.c:211
+#: indicator-netspeed-unity.c:206
 msgid "PB"
 msgstr "পেবিবাইট"
 
-#: indicator-netspeed-unity.c:212
+#: indicator-netspeed-unity.c:207
 msgid "PiB"
 msgstr "পেবিবাইট"
 
-#: indicator-netspeed-unity.c:608 indicator-netspeed-unity.c:634
-#: indicator-netspeed-unity.c:652 indicator-netspeed-unity.c:670
-#: indicator-netspeed-unity.c:713
+#: indicator-netspeed-unity.c:603 indicator-netspeed-unity.c:629
+#: indicator-netspeed-unity.c:647 indicator-netspeed-unity.c:665
+#: indicator-netspeed-unity.c:708
 msgid "s"
 msgstr "স"
 
-#: indicator-netspeed-unity.c:814
+#: indicator-netspeed-unity.c:810
 msgid "Settings"
 msgstr "সেটিংস"
 
-#: indicator-netspeed-unity.c:819
+#: indicator-netspeed-unity.c:815
 msgid "Prefixes"
 msgstr "সূচি"
 
-#: indicator-netspeed-unity.c:825
+#: indicator-netspeed-unity.c:821
 msgid "Binary"
 msgstr "বাইনারি"
 
-#: indicator-netspeed-unity.c:829
+#: indicator-netspeed-unity.c:825
 msgid "Decimal"
 msgstr "দশমিক"
 
-#: indicator-netspeed-unity.c:833
+#: indicator-netspeed-unity.c:829
 msgid "Bits"
 msgstr "বিটস"
 
-#: indicator-netspeed-unity.c:845
+#: indicator-netspeed-unity.c:841
 msgid "Theme"
 msgstr "থিম"
 
-#: indicator-netspeed-unity.c:851
+#: indicator-netspeed-unity.c:847
 msgid "Dark"
 msgstr "গাঢ়"
 
-#: indicator-netspeed-unity.c:855
+#: indicator-netspeed-unity.c:851
 msgid "Light"
 msgstr "উজ্জল"
 
-#: indicator-netspeed-unity.c:859
+#: indicator-netspeed-unity.c:855
 msgid "Current"
 msgstr "বর্তমান"
 
-#: indicator-netspeed-unity.c:876
+#: indicator-netspeed-unity.c:872
 msgid "View"
 msgstr "প্রদর্শন"
 
-#: indicator-netspeed-unity.c:882
+#: indicator-netspeed-unity.c:878
 msgid "Normal"
 msgstr "সাধারণ"
 
-#: indicator-netspeed-unity.c:886
+#: indicator-netspeed-unity.c:882
 msgid "Compact"
 msgstr "সংক্ষিপ্ত"
 
-#: indicator-netspeed-unity.c:890
+#: indicator-netspeed-unity.c:886
 msgid "Minimum"
 msgstr "সর্বনিম্ন"
 
-#: indicator-netspeed-unity.c:903
+#: indicator-netspeed-unity.c:899
 msgid "Padding"
 msgstr "প্যাডিং"
 
-#: indicator-netspeed-unity.c:908
+#: indicator-netspeed-unity.c:904
 msgid "Ping"
 msgstr ""
 
-#: indicator-netspeed-unity.c:913
+#: indicator-netspeed-unity.c:909
 msgid "Tools"
 msgstr "যন্ত্রাদি"
 
