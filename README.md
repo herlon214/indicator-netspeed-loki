@@ -1,4 +1,4 @@
-Network speed indicator for Unity
+Network speed indicator for Unity (working on Elementary OS (Loki) )
 =================================
 
 ![](./screenshot.png)
