@@ -119,11 +119,11 @@ gboolean do_ping() {
     dup2 (link[1], STDOUT_FILENO);
     close(link[0]);
     close(link[1]);
-    execl("/bin/ping", "ping", "8.8.8.8", "-c", "1", NULL);
+    execl("/bin/ping", "ping", "8.8.8.8", "-i", "10", "-w", "1","-c", "1", NULL);
     die("execl");
 
   } else {
-
+    wait(NULL);
     close(link[1]);
     read(link[0], foo, sizeof(foo));
     ping_value = strtok (foo, "=");
@@ -132,9 +132,12 @@ gboolean do_ping() {
     ping_value = strtok (NULL, "=");
     ping_value = strtok (ping_value, " ");
 
-    GSTR_SET(ping_gtk, _(ping_value));
+    if (ping_value == NULL) {
+      GSTR_SET(ping_gtk, _("+999"));
+    }else {
+      GSTR_SET(ping_gtk, _(ping_value));
+    }
 
-    wait(NULL);
 
     return TRUE;
     
